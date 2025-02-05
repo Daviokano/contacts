@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+    --bg-color1: #6118a7;
+    --bg-color2: #4c6fbf;
+    --bg-color3: #483D8B;
+    --bg-color4: #00BFFF;
+    --bg-color5: #ffffff;
+    --bg-color6: #201a49;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", serif;
+}
+
+body{
+    background-image: linear-gradient(38deg,#483D8B,#4c6fbf 60%,#6118a7);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 80px;
+    height: 75px;
+}
+
+
+header{
+    display: flex;
+    background: transparent;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+    background: linear-gradient(135deg,rgba(255,255,255,0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(100%);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+}
+nav ul li{
+    display: inline-block;
+    padding: 20px;
+    color:var(--bg-color5);
+}
+
+nav ul li a{
+    display: flex;
+    color:#fff;
+    text-decoration: none;
+    justify-content:center;
+    height: 13px;
+}
+
+nav ul li a:hover{
+    color: var(--bg-color6);
+    text-decoration: none;
+    box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.5); /* Adiciona sombra para destaque */
+    position: relative;
+    transition: 0.5s;
+}
+
+.menu-mobile{
+    display: none;
+    cursor: pointer;
+}
+
+.menu-mobile div{
+    width: 32px;
+    height: 3px;
+    background: #fff;
+    margin:8px;
+    transition: 0.3;
+}
+
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+}
+
+.container #introducao{
+    display: flex;
+    width: 50%;
+    color: #fff;
+    font-size: 45px;
+    width: 50%;
+    height: 100px;
+    margin-left: 150px;
+    font-weight: 1000;
+}
+
+
+/* Estilo da imagem */
+#imagem {
+    margin-top: 70px; /* Espaçamento superior */
+    margin-left: 80px;
+}
+
+.imagem {
+    width: 300px; /* Largura fixa */
+    height: 300px; /* Altura fixa */
+    object-fit: cover; /* Garante que a imagem preencha sem distorcer */
+    border-radius: 50%; /* Deixa a imagem arredondada */
+    border: 5px solid #ccc; /* Adiciona uma borda */
+    box-shadow: 10px 20px 50px rgba(0, 0, 0, 10); /* Adiciona sombra para destaque */
+    transition: 0.4s;
+}
+
+
+#contato{
+    height: 100px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(135deg,rgba(255,255,255,0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(100%);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    cursor: pointer;
+}
+
+.img{
+    margin-top: 30px;
+    width: 40px;
+    height: 40px;
+}
+
+
+#copyright{
+    display: flex;
+    background-color: transparent;
+    color: #fff;
+    align-items: center;
+    
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px) ;
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0) ;
+    }
+}
+
+.menu-mobile.active .line1{
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.menu-mobile.active .line2{
+    opacity: 0;
+}
+
+.menu-mobile.active .line3{
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+@media (max-width: 900px) {
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav-list{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 90vh;
+        background: var(--bg-color1);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list.active{
+        transform: translateX(0)
+    }
+
+    .nav-list li{
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .menu-mobile{
+        display: block;
+    }
+    
+    
+    .container {
+        display: flex;
+        flex-wrap: wrap; /* Deixa os itens agrupados em telas menores*/
+        justify-content: center;
+        min-height: 100vh; /* Define altura minima */
+
+      }
+      
+      .container #introducao{
+        font-weight: 800;
+        font-size: 30px;
+        margin-top: 90px;
+        margin-right: 35%;
+      }
+
+      .container #imagem{
+        margin-right: 80px;
+      }
+
+      #contato{
+        margin-top: 100px;
+      }
+
+      .img{
+        width: 30px;
+        height: 30px;
+      }
+}
