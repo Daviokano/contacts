@@ -199,8 +199,7 @@ nav ul li a:hover{
 #contato{
   display: flex;
   height: 100px;
-  margin-top: 164%;
-  
+  margin-top: 180%;
   justify-content: space-around;
   align-items: center;
   background-color: transparent;
