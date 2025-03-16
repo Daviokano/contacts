@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-:root{
-    --bg-color1: #6118a7;
-    --bg-color2: #4c6fbf;
-    --bg-color3: #483D8B;
-    --bg-color4: #00BFFF;
-    --bg-color5: #ffffff;
-    --bg-color6: #201a49;
-}
-
 *{
     margin: 0;
     padding: 0;
@@ -18,51 +8,40 @@
 }
 
 body{
-    background-image: linear-gradient(38deg,#483D8B,#4c6fbf 60%,#6118a7);
+    background-attachment: fixed; /* Garante que o fundo cobre toda a tela */
+    background-size: cover; /* Ajusta o tamanho do fundo */
+    min-height: 100vh; /* Garante que o body tenha no mínimo 100% da tela */
+    background-color: #fbf6ff; 
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-.logo {
-    width: 80px;
-    height: 75px;
-}
+
 
 
 header{
     display: flex;
+    height: 60px;
     background: transparent;
     align-items: center;
     justify-content: space-around;
-    color: #fff;
-    background: linear-gradient(135deg,rgba(255,255,255,0.1), rgba(255,255,255,0));
-    backdrop-filter: blur(100%);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    color:  #8e51b9;
 }
 nav ul li{
     display: inline-block;
     padding: 20px;
-    color:var(--bg-color5);
 }
 
 nav ul li a{
     display: flex;
-    color:#fff;
+    color:  #8e51b9;
     text-decoration: none;
     justify-content:center;
     height: 13px;
+    font-weight: 700;
 }
 
 nav ul li a:hover{
-    color: var(--bg-color6);
+    color: #807e7e;
     text-decoration: none;
-    box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.5); /* Adiciona sombra para destaque */
-    position: relative;
-    transition: 0.5s;
 }
 
 .menu-mobile{
@@ -73,76 +52,16 @@ nav ul li a:hover{
 .menu-mobile div{
     width: 32px;
     height: 3px;
-    background: #fff;
+    background: #8e51b9;
     margin:8px;
     transition: 0.3;
+    border-radius: 10px;
 }
 
 
-.container{
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    align-items: center;
-}
-
-.container #introducao{
-    display: flex;
-    width: 50%;
-    color: #fff;
-    font-size: 45px;
-    width: 50%;
-    height: 100px;
-    margin-left: 150px;
-    font-weight: 1000;
-}
 
 
-/* Estilo da imagem */
-#imagem {
-    margin-top: 70px; /* Espaçamento superior */
-    margin-left: 80px;
-}
-
-.imagem {
-    width: 300px; /* Largura fixa */
-    height: 300px; /* Altura fixa */
-    object-fit: cover; /* Garante que a imagem preencha sem distorcer */
-    border-radius: 50%; /* Deixa a imagem arredondada */
-    border: 5px solid #ccc; /* Adiciona uma borda */
-    box-shadow: 10px 20px 50px rgba(0, 0, 0, 10); /* Adiciona sombra para destaque */
-    transition: 0.4s;
-}
-
-
-#contato{
-    height: 100px;
-    background-color: transparent;
-    display: flex;
-    justify-content: space-around;
-    background: linear-gradient(135deg,rgba(255,255,255,0.1), rgba(255,255,255,0));
-    backdrop-filter: blur(100%);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
-    cursor: pointer;
-}
-
-.img{
-    margin-top: 30px;
-    width: 40px;
-    height: 40px;
-}
-
-
-#copyright{
-    display: flex;
-    background-color: transparent;
-    color: #fff;
-    align-items: center;
-    
-}
-
+/*Menu Responsivo*/
 @keyframes navLinkFade{
     from{
         opacity: 0;
@@ -156,30 +75,177 @@ nav ul li a:hover{
 
 .menu-mobile.active .line1{
     transform: rotate(-45deg) translate(-8px, 8px);
+    border-radius: 10px;
 }
 
 .menu-mobile.active .line2{
     opacity: 0;
+    border-radius: 10px;
 }
 
 .menu-mobile.active .line3{
     transform: rotate(45deg) translate(-8px, -8px);
+    border-radius: 10px;
 }
 
 
+#banner{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+#img{
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    width: 800px;
+    height: 400px;
+}
+
+main.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px;
+}
+
+
+main.cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background:#ffffff;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    max-width: 256px;
+    margin-left: 40px;
+    box-shadow: 20px 20px 50px -30px #cd88ff;
+}
+
+main.cards section.card:first-child{
+    margin-left: 0;
+}
+
+main.cards section.card .imagem{
+    width: 240px;
+    height: 170px;
+}
+
+main.cards section.card img{
+    width: 200px;
+    height: 150px;
+    border-radius: 15px;
+}
+
+main.cards section.card h3{
+    font-size: 100%;
+    margin: 16px 0px;
+}
+
+main.cards section.card span{
+    font-weight: 500;
+    max-width: 240px;
+    font-size: 90%;
+    margin-bottom: 16px;
+}
+
+main.cards section.card button{
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 600;
+    background: linear-gradient(to right, #8e51b9, #cd88ff);
+}
+
+.footer{
+    position: relative;
+    width: 100%;
+    background: #8e51b9;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+}
+
+.icon-elem{
+    list-style: none;
+}
+
+.icon{
+    color: #ffffff;
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.icon:hover{
+    transform: translateY(-10px);
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.menu-elem{
+    list-style: none;
+}
+
+.menu-icon{
+    color: #ffffff;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.menu-icon:hover{
+    opacity: 1;
+}
+
+.text{
+    color: #ffffff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+
+/*Responsividade*/
 @media (max-width: 900px) {
 
     body{
         overflow-x: hidden;
     }
 
+    /*Menu Responsivo*/
     .nav-list{
         position: absolute;
         top: 8vh;
         right: 0;
         width: 50vw;
         height: 90vh;
-        background: var(--bg-color1);
+        background: #b4b4b4;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -194,38 +260,29 @@ nav ul li a:hover{
     .nav-list li{
         margin-left: 0;
         opacity: 0;
+        margin-left: 20px;
     }
 
     .menu-mobile{
         display: block;
     }
     
-    
-    .container {
-        display: flex;
-        flex-wrap: wrap; /* Deixa os itens agrupados em telas menores*/
+    #img{
         justify-content: center;
-        min-height: 100vh; /* Define altura minima */
+        height: 200px;
+        width: 350px;
+    }
 
-      }
-      
-      .container #introducao{
-        font-weight: 800;
-        font-size: 30px;
-        margin-top: 90px;
-        margin-right: 35%;
-      }
+    main.cards{
+        flex-direction: column;
+    }
 
-      .container #imagem{
-        margin-right: 80px;
-      }
+    main.cards section.card{
+        margin-left: 0;
+        margin-bottom: 36px;
+    }
 
-      #contato{
-        margin-top: 100px;
-      }
-
-      .img{
-        width: 30px;
-        height: 30px;
-      }
+    main.cards section.card:last-child{
+        margin-bottom: 0;
+    }
 }
