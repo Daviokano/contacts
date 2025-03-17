@@ -99,7 +99,7 @@ nav ul li a:hover{
   /* Profession Cards Grid Layout */
 .profissoescomoseguir {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
@@ -135,16 +135,21 @@ nav ul li a:hover{
 }
 
 .engenheiro .card-header {
-  background-color: #8b5cf6;
+  background-color: #08001a;
 }
 
 .cientista-dados .card-header {
   background-color: #770813;
 }
 
+.veterinario .card-header {
+  background-color: #8e51b9;
+}
+
 .card-conteudo {
   padding: 1.5rem;
 }
+
 
 .passos {
   list-style-position: inside;
