@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="shortcut icon" href="./img/icone.png">
+    <title>Prof+</title>
+</head>
+<body>
+    <section id="estrutura">
+        <div id="imagemLoguin">
+            <h1 id="NomeLogin">Prof+</h1>
+            <img src="./img/contacts.png" id="imagemInicial">
+        </div> 
+
+        <div class="page">
+            <form method="POST" class="formLogin">
+                <h1>Bem vindo de novo!</h1>
+                <p>Digite os seus dados de acesso no campo abaixo.</p>
+                <label for="email">Usuário</label>
+                <input type="email" id="email" placeholder="Digite seu nome de usuário" required />
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="Digite sua senha" required />
+                <input type="button" value="Login" class="btn"  onclick="logar()"/>
+            </form>
+        </div>
+    </section>
+    <script src="./js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color1: #8e51b9;
+    --color2: white;
+    --color3: rgb(233, 0, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Raleway", serif;
+}
+
+#imagemLoguin h1 {
+    color: var(--color1);
+    font-size: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#estrutura {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    gap: 20px; 
+}
+
+#imagemInicial {
+    width: 500px;
+    height: 100%;
+}
+
+#imagemLoguin {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    height: 100vh;
+    background-color: var(--color1);
+    flex: 1;
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 40px;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    gap: 15px;
+}
+
+.formLogin h1 {
+    font-weight: 500;
+    font-size: 2.3em;
+}
+
+.formLogin p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.formLogin input {
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
+}
+
+
+.btn {
+    background-color: var(--color1);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all linear 160ms;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #370a72;
+}
+
+/* Não sabia fazer responsividade, então pesquisei e fiz uso do chatgpt, mas comentei tudo -_- */
+@media (max-width: 990px) {
+    #estrutura {
+        flex-direction: column; /* Organiza nossas div verticalmente  */
+        height: auto; /* Ajusta a altura aumomaticamente */
+        gap: 20px; /* Espaçamento entre linhas e colunas */
+    }
+
+    #imagemLoguin,
+    .page {
+        width: 100%; /* As divs possuem 100% da largura */
+        height: auto; /* Ajusta a altura automaticamente */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    #NomeLogin {
+        width: 100%; /* Faz o texto ocupar toda a largura disponível */
+    }
+
+    #imagemInicial {
+        width: 70%; /* Arruma o tamanho da imagem */
+        height: auto; /*  Ajusta a altura automaticamente da imagem */
+    } 
+
+    
+
+    .page {
+        padding: 20px; /* Adiciona espaçamento interno para telas menores */
+    }
+}
+

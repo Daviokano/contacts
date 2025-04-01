@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: "Raleway", serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-attachment: fixed; /* Garante que o fundo cobre toda a tela */
+  background-size: cover; /* Ajusta o tamanho do fundo */
+  min-height: 100vh; /* Garante que o body tenha no mínimo 100% da tela */
+  background-color: #fbf6ff;
+}
+
+
+header{
+  display: flex;
+  height: 60px;
+  background: transparent;
+  align-items: center;
+  justify-content: space-around;
+  color:  #8e51b9;
+}
+nav ul li{
+  display: inline-block;
+  padding: 20px;
+}
+
+nav ul li a{
+  display: flex;
+  color:  #8e51b9;
+  text-decoration: none;
+  justify-content:center;
+  height: 13px;
+  font-weight: 700;
+}
+
+nav ul li a:hover{
+  color: #807e7e;
+  text-decoration: none;
+}
+
+#logo{
+  display: flex;
+  width: 70px;
+  height: 70px;
+  margin-top: 20px;
+}
+
+#logo img{
+  border-radius: 100%;
+}
+
+
+.menu-mobile{
+  display: none;
+  cursor: pointer;
+}
+
+.menu-mobile div{
+  width: 32px;
+  height: 3px;
+  background: #8e51b9;
+  margin:8px;
+  transition: 0.3;
+  border-radius: 10px;
+}
+
+
+
+
+/*Menu Responsivo*/
+@keyframes navLinkFade{
+  from{
+      opacity: 0;
+      transform: translateX(50px) ;
+  }
+  to{
+      opacity: 1;
+      transform: translateX(0) ;
+  }
+}
+
+.menu-mobile.active .line1{
+  transform: rotate(-45deg) translate(-8px, 8px);
+  border-radius: 10px;
+}
+
+.menu-mobile.active .line2{
+  opacity: 0;
+  border-radius: 10px;
+}
+
+.menu-mobile.active .line3{
+  transform: rotate(45deg) translate(-8px, -8px);
+  border-radius: 10px;
+}
+
+  
+  .banner{
+    display: flex;
+    justify-content: center;
+  }
+  #banner{
+    width: 100%;
+    height: 600px;
+  }
+
+  /* Profession Cards Grid Layout */
+.profissoescomoseguir {
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Card Base Styling */
+.comoseguir-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.comoseguir-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card Header Styling */
+.card-header {
+  padding: 1.5rem;
+  color: white;
+}
+
+.policial .card-header {
+  background-color:  gray;
+}
+
+.medico .card-header {
+  background-color: #10b981;
+}
+
+.programador .card-header {
+  background-color: blue;
+}
+
+.engenheiro .card-header {
+  background-color: #08001a;
+}
+
+.cientista-dados .card-header {
+  background-color: #770813;
+}
+
+.veterinario .card-header {
+  background-color: #8e51b9;
+}
+
+.card-conteudo {
+  padding: 1.5rem;
+}
+
+
+.passos {
+  list-style-position: inside;
+  margin-bottom: 1.5rem;
+}
+
+.passos li {
+  margin-bottom: 0.8rem;
+  padding-left: 1rem;
+}
+
+.passos li::marker {
+  font-weight: bold;
+}
+
+.recursos {
+  background-color: #dddedf;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.recursos h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.recursos ul {
+  list-style-type: none;
+}
+
+.recursos li {
+  margin-bottom: 0.5rem;
+}
+
+.recursos a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.recursos a:hover {
+  text-decoration: underline;
+}
+
+.footer{
+  position: relative;
+  width: 100%;
+  background: #8e51b9;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-icon{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 10px 5px;
+  flex-wrap: wrap;
+}
+
+.icon-elem{
+  list-style: none;
+}
+
+.icon{
+  color: #ffffff;
+  font-size: 32px;
+  display: inline-block;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+.icon:hover{
+  transform: translateY(-10px);
+}
+
+.menu{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.menu-elem{
+  list-style: none;
+}
+
+.menu-icon{
+  color: #ffffff;
+  font-size: 20px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px 10px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.menu-icon:hover{
+  opacity: 1;
+}
+
+.text{
+  color: #ffffff;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+
+@media (max-width: 768px) {
+
+  body{
+    overflow-x: hidden;
+}
+
+  /*Menu Responsivo*/
+  .nav-list{
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 50vw;
+      height: 90vh;
+      background: #b4b4b4;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+  }
+
+  .nav-list.active{
+      transform: translateX(0)
+  }
+
+  .nav-list li{
+      margin-left: 0;
+      opacity: 0;
+      margin-left: 20px;
+  }
+
+  .menu-mobile{
+    display: block;
+    padding-left: 190px;
+}
+
+#logo{
+    padding-left: 30px;
+}
+
+  .professions {
+      grid-template-columns: 1fr;
+  }
+  .card-conteudo{
+    flex-direction: column;
+    display: block;
+
+}
+}
